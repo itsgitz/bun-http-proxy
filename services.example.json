@@ -1,0 +1,7 @@
+[
+  { "mountPath": "/api/v1/service-1", "target": "http://localhost:3001/api/v1/service-1" },
+  { "mountPath": "/api/v1/service-2", "target": "http://localhost:3002/api/v1/service-2" },
+  { "mountPath": "/api/v1/service-3", "target": "http://localhost:3003/api/v1/service-3" },
+  { "mountPath": "/api/v1/service-4", "target": "http://localhost:3004/api/v1/service-4" },
+  { "mountPath": "/api/v1/service-5", "target": "http://localhost:3005/api/v1/service-5" }
+]

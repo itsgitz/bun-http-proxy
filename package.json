@@ -1,0 +1,9 @@
+{
+  "name": "bun-http-proxy",
+  "scripts": {
+    "start": "bun ./src/main.ts"
+  },
+  "dependencies": {
+    "hono": "^4.7.11"
+  }
+}
