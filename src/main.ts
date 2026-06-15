@@ -12,6 +12,8 @@ const app = new Hono();
 
 app.use(logger());
 
+app.get("/health", (c) => c.json({ status: "ok" }));
+
 for (const svc of services as ServiceConfig[]) {
   app.all(`${svc.mountPath}/*`, (c) => {
     const url = new URL(c.req.url);
