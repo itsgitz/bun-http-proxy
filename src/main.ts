@@ -17,7 +17,8 @@ app.get("/health", (c) => c.json({ status: "ok" }));
 for (const svc of services as ServiceConfig[]) {
   app.all(`${svc.mountPath}/*`, (c) => {
     const url = new URL(c.req.url);
-    const targetUrl = svc.target + url.pathname.slice(svc.mountPath.length) + url.search;
+    const targetUrl =
+      svc.target + url.pathname.slice(svc.mountPath.length) + url.search;
     return proxy(targetUrl, {
       ...c.req,
       headers: c.req.header(),
@@ -26,6 +27,6 @@ for (const svc of services as ServiceConfig[]) {
 }
 
 export default {
-  port: Number(process.env.PORT || 8000),
+  port: Number(process.env.PORT || 8080),
   fetch: app.fetch,
 };
