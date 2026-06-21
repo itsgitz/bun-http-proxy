@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) and OpenCode (openco
 
 A minimal HTTP reverse proxy that fronts the FinPay CRM v2 backend microservices.
 Built with **Hono** + **Bun** — no build step, TypeScript executed directly. It maps incoming
-`/api/v1/<service>` paths to the local NestJS services and is the local-dev API gateway
+`/dev/api/v1/<service>` paths to the local NestJS services and is the local-dev API gateway
 analog of the deployed gateway (`NEXT_PUBLIC_API_BASE_URL`).
 
 ## Commands
@@ -34,7 +34,7 @@ To add a service: append one entry to `services.json`. No other file needs to ch
 
 `.env` (gitignored, see `.env.example`):
 
-- `PORT` — proxy listen port (default 8000)
+- `PORT` — proxy listen port (default 8080)
 
 Bun auto-loads `.env` — `dotenv` is not used.
 

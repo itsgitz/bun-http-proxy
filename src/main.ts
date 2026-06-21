@@ -22,6 +22,7 @@ for (const svc of services as ServiceConfig[]) {
     return proxy(targetUrl, {
       ...c.req,
       headers: c.req.header(),
+      redirect: "manual",
     });
   });
 }
